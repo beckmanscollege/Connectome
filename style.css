@@ -591,12 +591,12 @@ height:100%;
 	position:fixed;
 	display:flex;
 	flex-direction: column;
-	font-size: 40px;
+	font-size: 2.5vw;
 	line-height: 2;
 	text-align: left;
 	color:#2a292c;
 	margin-top: 190px;
-	left: 280px;
+	left: 25%;
 
 }
 
