@@ -22,6 +22,7 @@ body {
 	background-color:black;
 	overflow:hidden;
 
+
 }
 
 main {
@@ -54,6 +55,26 @@ main {
 
 
 }
+
+.overlay2 {
+
+	position: fixed;
+	width:100%;
+	height: 100%;
+	background-image: url(assets/images/overlay4.png);
+	background-size: 95%;
+	background-repeat: repeat;
+	opacity:60%;
+	visibility: visible;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	pointer-events:none;
+
+
+}
+
 #allFolders {
 display: flex;
 width:100vw;
@@ -134,7 +155,7 @@ pointer-events:none;
 
 .aboutfolder{
 	position: absolute;
-	top:20%;
+	top:5%;
 	left: 2%;
 
 
@@ -142,16 +163,9 @@ pointer-events:none;
 
 .folder1 {
 	position: absolute;
-	top: 35%;
+	top: 20%;
 	left:2%;
 
-
-}
-
-.folder4 {
-position: absolute;
-left:2%;
-top:5%;
 
 }
 
@@ -163,13 +177,13 @@ top:5%;
 
 .remindersicon {
 position: absolute;
-top: 80%;
+top:20%;
 left:2%;
 }
 
 .eyesapp {
 	position: absolute;
-	top: 60%;
+	top: 35%;
 	left:2%;
 
 
@@ -177,8 +191,9 @@ left:2%;
 
 .folder7 {
 position: absolute;
-top:20%;
+top:35%;
 left:15%;
+border-radius: 25px;
 
 }
 
@@ -197,7 +212,7 @@ left:15%;
 
 .folder8 {
 position: absolute;
-top:35%;
+top:20%;
 left:15%;
 
 
@@ -291,7 +306,6 @@ width:2.5%;
 	top: 1.5%;
 	left:2.5%;
 	border-radius: 15px;
-	border-style:dashed;
 
 }
 
@@ -301,11 +315,11 @@ width:2.5%;
 .containerforfolder {
 
 	display:grid;
-	grid-template-columns: 155px 155px 155px 155px 155px 155px;
-	grid-template-rows: 180px auto 180px;
-	column-gap: 10px;
-	row-gap: 15px;
-	position:static;
+	grid-template-columns: 10vw 10vw 10vw 10vw 10vw 10vw;
+	grid-template-rows: 30% 30% 30%;
+	column-gap: 2%;
+	row-gap: 5%;
+	position:absolute;
 	top:10%;
 	left:4.5%;
 	width:93.7%;
@@ -320,32 +334,50 @@ width:2.5%;
 }
 
 .containerforflow {
-
 	display:grid;
-	grid-template-columns: 155px 155px 155px 155px;
-	grid-template-rows: 160px 160px 160px;
-	column-gap: 10px;
-	row-gap: 15px;
-	grid-column-start: 1;
-	grid-column-end: 6;
-	grid-row-start: 1;
-	grid-row-end: ;
-	position:static;
+	column-gap: 20%;
+	row-gap: 20%;
+	grid-column-start: 2;
+	grid-column-end: 200;
+	grid-row-start: 3;
+	grid-row-end: 1;
+	position:absolute;
 	top:10%;
-	left:40px;
+	left:4%;
 	width:93.7%;
 	height:82.6%;
 	overflow:scroll;
 	text-align:center;
+	align-items: center;
 	justify-content: center;
-	background-image: url("assets/images/braindump.png");
+
+	/*background-image: url("assets/images/braindump.png");*/
+
 	background-repeat:repeat;
 	position: absolute;
 
+
+
 }
 
-.containerforflow button, .containerforflow img {
-width:150px;
+.containerforflow button  {
+	width:500px;
+	filter: drop-shadow(0 0 0 0 rgba(0 0 0 0));
+	text-align: center;
+
+}
+.containerforflow img {
+width:100%;
+
+}
+
+.containerforflow figcaption {
+
+font-size: 25px;
+text-align:center;
+position:fixed;
+width:95%;
+
 
 }
 
@@ -376,10 +408,10 @@ height:530%;
 .containerforhearing {
 	display:flex;
 	flex-direction: column;
-	top:9%;
-	left:3%;
-	width:93.7%;
-	height:82.6%;
+	top:7.4%;
+	left:2%;
+	width:95.7%;
+	height:85	.6%;
 	overflow:hidden;
 	text-align:center;
 	justify-content: center;
@@ -398,6 +430,27 @@ left:0%;
 
 
 }
+
+.containerforthinking {
+
+position:absolute;
+top:10%;
+left:4.5%;
+width:93.7%;
+height:81.5%;
+background-image: url();
+
+
+}
+.containerforthinking img {
+
+position:relative;
+top:15%;
+
+
+}
+
+
 
 .image {
 border-style: ridge;
@@ -421,26 +474,35 @@ grid-column: 3;
 	grid-row: 3;
 }
 
+
+.folder4 {
+grid-column: 5;
+	grid-row: 3;
+
+}
+
+
 /* 	webring			*/
 
 #containerforwebring {
 
 display:grid;
-grid-template-columns: 155px 155px 155px 155px 155px 155px;
+grid-template-columns: 19% 19% 19% 19% 19%;
 grid-template-rows: 180px auto 180px;
 column-gap: 10px;
 row-gap: 15px;
 position:static;
-width:93.7%;
+width:93%;
 height:81.5%;
 top:10%;
-left:5%;
+left:4.5%;
 overflow:scroll;
 text-align:center;
 background-image:url("assets/images/interconnectivity.png");
 background-size: 100%;
 background-repeat:repeat;
 position: absolute;
+background-color:red;
 }
 
 
@@ -451,20 +513,18 @@ position: absolute;
 #everythinInsideTrash {
 	position: absolute;
 	display: grid;
-	grid-template-columns: 155px 155px 155px 155px 155px 155px;
-	grid-template-rows: 180px 180px 180px 180px;
-	column-gap: 10px;
-	row-gap: 15px;
-	grid-column-start: 1;
-	grid-column-end: 6;
-	grid-row-start: 1;
+	align-items:center;
+	grid-template-columns: 20% 20% 20% 20%;
+	background-image: url("assets/images/trashbackground2.png");
+	column-gap: 5%;
+	row-gap: 10%;
 	top:10%;
 	left:3.8%;
 	width: 94.75%;
 	height: 82.75%;
 	overflow: scroll;
 	font-size:240px;
-	background-image: url("assets/images/trashbackground.png")
+
 }
 
 
@@ -486,10 +546,28 @@ position: absolute;
 
 }
 
+.hidetrash {
+	visibility: hidden;
+}
+
 .trashicon {
 position: static;
 grid-column: 5;
 grid-row:2;
+
+}
+
+.neuron {
+width:10vw;
+height:10vw;
+filter: drop-shadow(0 0 0.75rem white);
+
+}
+
+.neuron img {
+position:absolute;
+width:100%;
+height:100%;
 
 }
 
@@ -612,17 +690,6 @@ width:96%;
 
 
 }
-
-/*
-.previewwrapper {
-
-background-color:red;
-width:100%;
-height:100%;
-position:fixed;
-
-}
-*/
 
 body.show-preview .preview {
   display: flex;

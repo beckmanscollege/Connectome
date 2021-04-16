@@ -180,25 +180,6 @@ mouseTargetTrash.addEventListener('mouseleave', e => {
 });
 
 
-// ---- autoplay -----
-/*
-const eyesapp = document.getElementById("desktop-5");
-const videoPlayer = document.getElementById("eyes");
-
-if (document.getElementById("desktop-5").classList.contains('is-open') {
-  function playVid() {
-    //document.getElementById('eyes').src='https://player.vimeo.com/video/6655910?autoplay=1';
-        console.log("thisshouldshowthevideo");
-        videoPlayer.play();
-
-      }
-  } else {
-        videoPlayer.pause();
-        console.log("this should hide video");
-        //document.getElementById('eyes').src='';
-
-  };
-  */
 
 
 //----  EMPTY trash------->>>>
@@ -215,11 +196,30 @@ emptyTrash.addEventListener('click', e => {
   function removeAllChildNodes(parent) {
       while (parent.firstChild) {
           parent.removeChild(parent.firstChild);
-          emptyTrash.remove();
-          mouseTargetTrash.src = "assets/images/UI/trashempty.png";
+          emptyTrash.classList.add("hidetrash");
+          changeTrash.src = "assets/images/UI/trashempty.png";
           trashcaniconstart = !trashcaniconstart;
           console.log("false");
 }}});
+
+// ----- new --->
+
+setInterval(function(){
+
+  let div = document.createElement("div");
+  const location = document.getElementById("everythinInsideTrash");
+  location.appendChild(div);
+  console.log("Hello");
+  div.classList.add("neuron");
+  emptyTrash.classList.remove("hidetrash");
+  changeTrash.src = "assets/images/UI/trash.png";
+
+var elem = document.createElement("img");
+elem.setAttribute("src", "assets/images/neuron2.png")
+
+div.appendChild(elem);
+
+}, 5000);
 
 // ---- draggable ---->
 
